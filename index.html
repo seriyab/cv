@@ -28,7 +28,7 @@
 						<nav>
 							<ul>
 								<li><a href="#intro">Intro</a></li>
-								<li><a href="#skills">Skills</a></li>
+								<li><a href="#skills" id="skills">Skills</a></li>
 								<li><a href="#education">Education</a></li>
 								<li><a href="#work">Work</a></li>
 								<li><a href="#contact">Contact</a></li>
@@ -460,10 +460,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/main.js"></script>
 		<script>
 		$(document).ready(function(){
-			$('.skillbar').each(function(){
-				$(this).find('.skillbar-bar').animate({
-					width:jQuery(this).attr('data-percent')
-				},2000);
+			$('#skills').on('click', function() {
+				$('.skillbar').each(function(){
+					$(this).find('.skillbar-bar').animate({
+						width:jQuery(this).attr('data-percent')
+					},2000);
+				});
 			});
 		});
 		</script>
