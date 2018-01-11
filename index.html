@@ -57,9 +57,48 @@
 						<!-- Skills -->
 							<article id="skills">
 								<h2 class="major">Skills</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+								<div class="skillbar clearfix " data-percent="20%">
+								    <div class="skillbar-title" style="background: #d35400;"><span>HTML5</span></div>
+								    <div class="skillbar-bar" style="background: #e67e22;"></div>
+								    <div class="skill-bar-percent">20%</div>
+								</div> <!-- End Skill Bar -->
+
+								<div class="skillbar clearfix " data-percent="25%">
+								    <div class="skillbar-title" style="background: #2980b9;"><span>CSS3</span></div>
+								    <div class="skillbar-bar" style="background: #3498db;"></div>
+								    <div class="skill-bar-percent">25%</div>
+								</div> <!-- End Skill Bar -->
+
+								<div class="skillbar clearfix " data-percent="50%">
+								    <div class="skillbar-title" style="background: #2c3e50;"><span>jQuery</span></div>
+								    <div class="skillbar-bar" style="background: #2c3e50;"></div>
+								    <div class="skill-bar-percent">50%</div>
+								</div> <!-- End Skill Bar -->
+
+								<div class="skillbar clearfix " data-percent="40%">
+								    <div class="skillbar-title" style="background: #46465e;"><span>PHP</span></div>
+								    <div class="skillbar-bar" style="background: #5a68a5;"></div>
+								    <div class="skill-bar-percent">40%</div>
+								</div> <!-- End Skill Bar -->
+
+								<div class="skillbar clearfix " data-percent="75%">
+								    <div class="skillbar-title" style="background: #333333;"><span>Wordpress</span></div>
+								    <div class="skillbar-bar" style="background: #525252;"></div>
+								    <div class="skill-bar-percent">75%</div>
+								</div> <!-- End Skill Bar -->
+
+								<div class="skillbar clearfix " data-percent="100%">
+								    <div class="skillbar-title" style="background: #27ae60;"><span>SEO</span></div>
+								    <div class="skillbar-bar" style="background: #2ecc71;"></div>
+								    <div class="skill-bar-percent">100%</div>
+								</div> <!-- End Skill Bar -->
+
+								<div class="skillbar clearfix " data-percent="70%">
+								    <div class="skillbar-title" style="background: #124e8c;"><span>Photoshop</span></div>
+								    <div class="skillbar-bar" style="background: #4288d0;"></div>
+								    <div class="skill-bar-percent">70%</div>
+								</div> <!-- End Skill Bar -->
+
 							</article>
 						<!-- Work -->
 							<article id="work">
@@ -402,6 +441,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+		<script>
+		$(document).ready(function(){
+			$('.skillbar').each(function(){
+				$(this).find('.skillbar-bar').animate({
+					width:jQuery(this).attr('data-percent')
+				},2000);
+			});
+		});
+		</script>
 	</body>
 </html>
